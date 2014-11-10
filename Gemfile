@@ -4,13 +4,13 @@ gem 'rails', '3.2.19'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-group :development do
-  gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3-ruby'
 end
 
 group :production do
   gem 'pg'
-  gem "activerecord-postgresql-adapter"
+  
 end
 
 gem 'rails_12factor', group: :production
@@ -27,6 +27,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
  
   gem 'thin'
+  gem 'therubyracer'
 
 end
 
